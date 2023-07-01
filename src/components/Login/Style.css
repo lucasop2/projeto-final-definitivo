@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+#login-form {
+    padding: 5vh;
+    height: 100vh;
+}
+
+/* #login-form: Conteudo do Cadastro de Nova Conta */
+.img-fundo img{
+    height: 70vh;
+    border-radius: 5% 0% 0% 5%;
+}
+
+.switch-case.show {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+/* .img-fundo h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+} */
+
+/* .cadastro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    background:#fff;
+    border-radius: 5%;
+} */
+
+/* .cadastro-registro {
+    display: flex;
+    flex-direction: column;
+} */
