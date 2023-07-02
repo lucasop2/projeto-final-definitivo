@@ -24,6 +24,8 @@ export default function Usuarios() {
   //funções para o funcionamento dos botoes
   function novosDados() {
     setTipo("novo");
+
+    console.log(tipo); // conferindo codigo
   }
   function limparDados() {
     setId("");
@@ -40,6 +42,8 @@ export default function Usuarios() {
     setNome(nome);
     setEmail(email);
     setSenha(senha);
+
+    console.log(tipo); //conferindo codigo
   }
 
   //sera usado para atualização da lista pos edição
@@ -52,6 +56,8 @@ export default function Usuarios() {
     users[index].senha = senha;
     setUsuarios(users);
     limparDados("");
+
+    console.log(usuarios); //conferindo codigo
   }
   //sera usado para atualização da lista ao criar uma nova conta
   function atualizaListaComNovoUsuario(response) {
@@ -66,6 +72,8 @@ export default function Usuarios() {
     users.push(obj);
     setUsuarios(users);
     limparDados("");
+
+    console.log(usuarios); //conferindo codigo
   }
   //sera usada quando clicar em criar conta ou editar informações
   function gravarDados() {
@@ -77,8 +85,10 @@ export default function Usuarios() {
             email: email,
             senha: senha,
           })
-
-          .then((response) => atualizaListaComNovoUsuario(response))
+          .then((response) => {
+            atualizaListaComNovoUsuario(response);
+            console.log(response); //conferindo codigo
+          })
           .catch((err) => console.log(err));
       } else if (tipo === "editar") {
         axios
@@ -88,8 +98,10 @@ export default function Usuarios() {
             email: email,
             senha: senha,
           })
-
-          .then((response) => atualizaListaUsuarioEditado(response))
+          .then((response) => {
+              atualizaListaUsuarioEditado(response);
+              console.log(response); //conferindo codigo
+          })
           .catch((err) => console.log(err));
       }
     } else {
@@ -104,15 +116,21 @@ export default function Usuarios() {
   const [showUsers, setShowUsers] = useState(false);
 
   const toggleHidden = () => {
+    console.log("toggleHidden foi chamada");
+
     setHidden(!hidden);
     setShowSwitchCase(false); // Reseta o estado do showSwitchCase ao esconder a section
     setShowCadastroLogin(false);  // Reseta o estado do showCadastroLogin ao esconder a section
   };
   const toggleSwitchCase = () => {
+    console.log("toggleSwitchCase foi chamada");
+
     setShowSwitchCase(!showSwitchCase);
     setShowCadastroLogin(!showCadastroLogin);
   };
   const toggleUsers = () => {
+    console.log("toggleUsers foi chamada");
+
     setShowUsers(!showUsers); // Função GET para mostrar usuarios do BD
   };
 
