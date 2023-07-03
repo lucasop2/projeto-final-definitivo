@@ -12,7 +12,7 @@ export default function Usuarios() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [tipo, setTipo] = useState("");
-  const url = "http://apibarbe-lucasop2.vercel.app/";
+  const url = "https://apibarbe-lucasop2.vercel.app/";
 
   useEffect(() => {
     fetch(url + "usuarios")
