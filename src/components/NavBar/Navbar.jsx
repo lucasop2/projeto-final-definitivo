@@ -1,12 +1,13 @@
 import React from 'react'
 import "../NavBar/Style.css";
+import backgroundImage3 from "../../assets/Leonardo_Diffusion_A_logotype_design_for_a_ThreePhase_Systems_3 (1).jpg";
 
 export default function Navbar() {
   return (
     <div>
       <section id="header">
         <nav id="navigation-bar">
-          <img src="../../imgs/icon.svg" className="web-logo" alt="logo" />
+          <img src={backgroundImage3} className="web-logo" alt="logo" />
           <span className="menu-icon">Three-Phase Calculator</span>
 
           <ul className="nav-bar">
@@ -16,7 +17,6 @@ export default function Navbar() {
         </nav>
 
         <div id="controle-horizontal">
-          <div id="efeito-luz"></div>
           <ul className="controle-itens">
             <li><a href="#">Calculadora</a></li>
             <li><a href="#">Como Usar</a></li>
