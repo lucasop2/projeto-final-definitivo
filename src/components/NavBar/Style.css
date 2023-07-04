@@ -2,12 +2,10 @@
     display: flex;
     flex-direction: column;
     background-color: #1D234D;
-    
 }
 
 #navigation-bar, 
-#controle-horizontal, 
-.controle-itens {
+#controle-horizontal {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -16,20 +14,29 @@
 }
 
 /* #navigation-bar: Conteudo da Barra de Pesquisa */
+#navigation-bar{
+    background-color: #1d2141;
+}
+
 .nav-bar {
     display: flex;
     align-items: center;
-    width: 30vw;
+    width: 28vw;
+    margin-right: 18vw;
     list-style: none;
 }
 
 .web-logo{
     position: relative;
-    width: 8vw;
-    height: 8vh;
+    top: 4vh;
+    width: 7vw;
+    height: 14vh;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .menu-icon{
+    width: 32vw;
     font-size: 3vh;
     font-family: 'Syne', Helvetica;
 
@@ -43,9 +50,11 @@
 }
 
 /* #controle-horizontal: Conteudo do Controle Geral da Calculadora*/
-#efeito-luz{
-    position: absolute;
-    width: 100vw;
+.controle-itens {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 72%;
     height: 8vh;
 }
 
@@ -61,10 +70,8 @@
     border: none;
 }
 
-.controle-itens li:hover {
-    /* Estilos do efeito de luz ao passar o mouse */
-    background: radial-gradient(25% 59.82% at 50% 100%, 
-                                #ed21397a 0%, 
-                                rgba(128, 21, 167, 0) 100%);
-    background-blend-mode: overlay;
+/* Controle Geral */ 
+a {
+    text-decoration: none;
+    color: #fff;
 }
